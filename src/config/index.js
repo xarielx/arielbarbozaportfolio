@@ -1,26 +1,26 @@
 module.exports = {
     author: 'Ariel Barboza',
-    siteTitle: 'Ariel Barboza - Portfolio',
+    siteTitle: 'Ariel Barboza - AI & Automation Engineer',
     siteShortTitle: 'AB',
     siteDescription:
-        'v2 personal portfolio. Ariel is a Software Engineer and based in Melbourne, FL',
+        'Staff Software Engineer & AI Solutions Architect specializing in LLMs, automation, and enterprise AI at Lockheed Martin. Building the future of intelligent systems.',
     siteLanguage: 'en_US',
     socialMedia: [
+        {
+            name: 'LinkedIn',
+            url: 'https://linkedin.com/in/abarboza',
+        },
+        {
+            name: 'GitHub',
+            url: 'https://github.com/xarielx',
+        },
         {
             name: 'Twitter',
             url: 'https://twitter.com/xarielx506',
         },
         {
-            name: 'LinkedIn',
-            url: 'https://www.linkedin.com/in/abarboza/',
-        },
-        {
             name: 'Medium',
             url: 'https://medium.com/@xarielx',
-        },
-        {
-            name: 'GitHub',
-            url: 'https://github.com/xarielx',
         },
         {
             name: 'Dev',
@@ -32,6 +32,10 @@ module.exports = {
             {
                 name: 'About',
                 url: '/#about',
+            },
+            {
+                name: 'Skills',
+                url: '/#skills',
             },
             {
                 name: 'Projects',
