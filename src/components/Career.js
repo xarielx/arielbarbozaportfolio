@@ -19,7 +19,7 @@ const Career = () => {
             description:
                 'Release Train Engineer for Automation Center of Excellence. Leading 104 engineers, architecting AI solutions (Twin Gen AI, AgilePulse AI), and driving enterprise transformation.',
             icon: '🚀',
-            color: 'bg-red-500',
+            color: 'bg-gradient-to-r from-cyan-500 to-blue-600',
             achievements: [
                 'Increased team velocity by 18-22%',
                 'Architected AI-powered NLP pipeline',
@@ -97,7 +97,7 @@ const Career = () => {
 
                 <div className='relative'>
                     {/* Timeline line */}
-                    <div className='hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-red-500 via-blue-500 to-gray-500'></div>
+                    <div className='hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 via-blue-500 to-slate-600'></div>
 
                     {milestones.map((milestone, index) => (
                         <motion.div
@@ -132,7 +132,7 @@ const Career = () => {
                                 <h3 className='text-2xl font-bold mb-1'>
                                     {milestone.title}
                                 </h3>
-                                <h4 className='text-lg text-red-500 font-semibold mb-3'>
+                                <h4 className='text-lg text-cyan-400 font-semibold mb-3'>
                                     {milestone.company}
                                 </h4>
                                 <p className='text-gray-700 dark:text-gray-300 mb-4'>
@@ -146,7 +146,7 @@ const Career = () => {
                                                     key={i}
                                                     className='flex items-start text-sm'
                                                 >
-                                                    <span className='text-red-500 mr-2'>
+                                                    <span className='text-cyan-400 mr-2'>
                                                         ✓
                                                     </span>
                                                     <span className='text-gray-600 dark:text-gray-400'>

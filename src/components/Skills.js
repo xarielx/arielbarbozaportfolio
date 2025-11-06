@@ -100,7 +100,7 @@ const Skills = () => {
     return (
         <section
             id='skills'
-            className='my-16 py-16 bg-gray-50 dark:bg-gray-900'
+            className='my-16 py-16 bg-slate-100 dark:bg-slate-900'
         >
             <div className='mx-auto container w-4/5 md:w-3/5'>
                 <motion.div
@@ -133,12 +133,12 @@ const Skills = () => {
                                 scale: 1.05,
                                 transition: { duration: 0.2 },
                             }}
-                            className='bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow duration-300'
+                            className='bg-slate-800 border border-cyan-500 border-opacity-30 rounded-lg p-6 shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 hover:border-cyan-400 transition-all duration-300'
                         >
                             <div className='text-4xl mb-4 text-center'>
                                 {category.icon}
                             </div>
-                            <h3 className='text-xl font-bold mb-4 text-center text-red-500'>
+                            <h3 className='text-xl font-bold mb-4 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
                                 {category.title}
                             </h3>
                             <ul className='space-y-2'>
@@ -147,7 +147,7 @@ const Skills = () => {
                                         key={skillIndex}
                                         className='flex items-start'
                                     >
-                                        <span className='text-red-500 mr-2'>
+                                        <span className='text-cyan-400 mr-2'>
                                             ▹
                                         </span>
                                         <span className='text-sm text-gray-700 dark:text-gray-300'>
@@ -167,8 +167,8 @@ const Skills = () => {
                     transition={{ delay: 0.8, duration: 0.6 }}
                     className='mt-12 text-center'
                 >
-                    <p className='text-lg text-gray-600 dark:text-gray-400'>
-                        <span className='font-bold text-red-500'>
+                    <p className='text-lg text-gray-300'>
+                        <span className='font-bold text-cyan-400'>
                             Certified:
                         </span>{' '}
                         AI Software Developer | Professional Scrum Master I |

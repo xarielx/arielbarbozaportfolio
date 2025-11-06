@@ -17,8 +17,8 @@ const Contact = ({ content }) => {
                     <MDXRenderer>{body}</MDXRenderer>
                 </div>
             </div>
-            <a href='mailto:dan.norris@hotmail.com'>
-                <button className='bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded mt-6'>
+            <a href='mailto:ariel@arielbarboza.com'>
+                <button className='bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold py-2 px-4 border-b-4 border-blue-800 hover:border-cyan-600 rounded mt-6 shadow-lg shadow-cyan-500/50'>
                     {frontmatter.callToAction}
                 </button>
             </a>
