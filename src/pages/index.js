@@ -2,6 +2,9 @@ import React from 'react';
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import About from '../components/About';
+import Statistics from '../components/Statistics';
+import Skills from '../components/Skills';
+import Career from '../components/Career';
 import Project from '../components/Projects';
 import Contact from '../components/Contact';
 import { graphql } from 'gatsby';
@@ -10,7 +13,10 @@ const IndexPage = ({ data }) => {
     return (
         <Layout>
             <Hero content={data.hero.edges} />
+            <Statistics />
             <About content={data.about.edges} />
+            <Skills />
+            <Career />
             <Project content={data.project.edges} />
             <Contact content={data.contact.edges} />
         </Layout>

@@ -20,13 +20,14 @@ module.exports = {
             },
             __key: 'pages',
         },
-        {
-            resolve: `gatsby-source-contentful`,
-            options: {
-                spaceId: `ksjezryl0d4i`,
-                accessToken: `b42OiMD7NNZEkzqGAykud4Sq8try_aGnjEgmDzEftlY`,
-            },
-        },
+        // Contentful disabled - using MDX instead
+        // {
+        //     resolve: `gatsby-source-contentful`,
+        //     options: {
+        //         spaceId: `ksjezryl0d4i`,
+        //         accessToken: `b42OiMD7NNZEkzqGAykud4Sq8try_aGnjEgmDzEftlY`,
+        //     },
+        // },
         {
             resolve: `gatsby-source-filesystem`,
             options: {
