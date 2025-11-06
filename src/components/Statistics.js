@@ -91,7 +91,7 @@ const Statistics = () => {
         }, [isInView, end]);
 
         return (
-            <div ref={ref} className='text-5xl font-bold text-red-500'>
+            <div ref={ref} className='text-5xl font-bold bg-gradient-to-r from-cyan-400 to-orange-500 bg-clip-text text-transparent'>
                 {count.toLocaleString()}
                 {suffix}
             </div>
@@ -121,7 +121,13 @@ const Statistics = () => {
     };
 
     return (
-        <section className='my-16 py-16 bg-gradient-to-br from-gray-900 to-gray-800 text-white'>
+        <section className='my-16 py-16 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white relative overflow-hidden'>
+            {/* Military-tech background pattern */}
+            <div className='absolute inset-0 opacity-10'>
+                <div className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent'></div>
+                <div className='absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-orange-500 to-transparent'></div>
+            </div>
+            <div className='relative z-10'>
             <div className='mx-auto container w-4/5 md:w-3/5'>
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
@@ -151,11 +157,11 @@ const Statistics = () => {
                                 scale: 1.05,
                                 transition: { duration: 0.2 },
                             }}
-                            className='bg-gray-800 bg-opacity-50 backdrop-blur-sm rounded-lg p-8 text-center border border-gray-700 hover:border-red-500 transition-all duration-300'
+                            className='bg-slate-800 bg-opacity-50 backdrop-blur-sm rounded-lg p-8 text-center border border-cyan-500 border-opacity-30 hover:border-cyan-400 hover:border-opacity-60 shadow-lg shadow-cyan-500/10 hover:shadow-cyan-500/30 transition-all duration-300'
                         >
                             <div className='text-4xl mb-4'>{stat.icon}</div>
                             <Counter end={stat.value} suffix={stat.suffix} />
-                            <h3 className='text-lg font-semibold mt-4 mb-2'>
+                            <h3 className='text-lg font-semibold mt-4 mb-2 text-cyan-300'>
                                 {stat.label}
                             </h3>
                             <p className='text-sm text-gray-400'>
@@ -164,6 +170,7 @@ const Statistics = () => {
                         </motion.div>
                     ))}
                 </motion.div>
+            </div>
             </div>
         </section>
     );

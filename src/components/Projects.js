@@ -60,7 +60,7 @@ const Project = ({ content }) => {
                             <div className='md:w-1/2 p-6 flex flex-col justify-between'>
                                 <div>
                                     <motion.h1
-                                        className='text-xs font-bold uppercase text-red-500 tracking-wider'
+                                        className='text-xs font-bold uppercase text-cyan-400 tracking-wider'
                                         whileHover={{ scale: 1.05 }}
                                     >
                                         {frontmatter.category}
@@ -87,7 +87,7 @@ const Project = ({ content }) => {
                                                 <motion.span
                                                     key={key}
                                                     whileHover={{ scale: 1.1 }}
-                                                    className='px-3 py-1 text-xs font-semibold text-red-500 bg-red-50 dark:bg-red-900 dark:bg-opacity-20 rounded-full'
+                                                    className='px-3 py-1 text-xs font-semibold text-cyan-400 bg-slate-800 border border-cyan-500 border-opacity-30 rounded-full'
                                                 >
                                                     {tag}
                                                 </motion.span>
@@ -97,7 +97,9 @@ const Project = ({ content }) => {
                                     <div className='flex gap-4'>
                                         <motion.a
                                             href={frontmatter.github}
-                                            className='w-8 h-8 text-gray-700 dark:text-gray-300 hover:text-red-500 dark:hover:text-red-500 transition-colors'
+                                            target='_blank'
+                                            rel='noopener noreferrer'
+                                            className='w-8 h-8 text-gray-700 dark:text-gray-300 hover:text-cyan-400 dark:hover:text-cyan-400 transition-colors'
                                             whileHover={{ scale: 1.2 }}
                                             whileTap={{ scale: 0.9 }}
                                         >
@@ -105,7 +107,9 @@ const Project = ({ content }) => {
                                         </motion.a>
                                         <motion.a
                                             href={frontmatter.external}
-                                            className='w-8 h-8 text-gray-700 dark:text-gray-300 hover:text-red-500 dark:hover:text-red-500 transition-colors'
+                                            target='_blank'
+                                            rel='noopener noreferrer'
+                                            className='w-8 h-8 text-gray-700 dark:text-gray-300 hover:text-cyan-400 dark:hover:text-cyan-400 transition-colors'
                                             whileHover={{ scale: 1.2 }}
                                             whileTap={{ scale: 0.9 }}
                                         >
