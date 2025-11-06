@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const Statistics = () => {
     const stats = [
@@ -49,8 +49,26 @@ const Statistics = () => {
 
     const Counter = ({ end, suffix }) => {
         const [count, setCount] = useState(0);
+        const [isInView, setIsInView] = useState(false);
         const ref = useRef(null);
-        const isInView = useInView(ref, { once: true });
+
+        useEffect(() => {
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (entry.isIntersecting) {
+                        setIsInView(true);
+                        observer.disconnect();
+                    }
+                },
+                { threshold: 0.1 }
+            );
+
+            if (ref.current) {
+                observer.observe(ref.current);
+            }
+
+            return () => observer.disconnect();
+        }, []);
 
         useEffect(() => {
             if (!isInView) return;
