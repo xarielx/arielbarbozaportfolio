@@ -135,7 +135,7 @@ export const milestones: Milestone[] = [
         title: '19K M1 Armor Crewman',
         company: 'United States Army',
         description:
-            'Tank Commander at Fort Bliss, Texas. Led crew with ultimate responsibility for $6.2M in equipment.',
+            'Tank Gunner at Fort Bliss, Texas. Served as second in command with responsibility for $6.2M in equipment.',
         achievements: [
             'General George S. Patton Jr. Award',
             'Excellence in Armor Award',
