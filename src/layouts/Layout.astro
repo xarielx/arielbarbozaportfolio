@@ -1,0 +1,124 @@
+---
+import '../styles/global.css'
+
+interface Props {
+    title?: string
+    description?: string
+}
+
+const {
+    title = 'Ariel Barboza — Associate Manager, AI & ML Engineering',
+    description = 'Associate Manager, AI & ML Engineering at Lockheed Martin. Leading AI-focused engineering teams, enterprise AI strategy, and intelligent data solutions. Cornell M.Eng, UF MBA, U.S. Army veteran.',
+} = Astro.props
+
+const siteUrl = 'https://arielbarboza.com'
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href
+const ogImage = `${siteUrl}/images/ariel_barboza.jpg`
+
+const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Ariel Barboza',
+    jobTitle: 'Associate Manager, AI & ML Engineering',
+    worksFor: { '@type': 'Organization', name: 'Lockheed Martin' },
+    url: siteUrl,
+    email: 'ariel@arielbarboza.com',
+    image: ogImage,
+    sameAs: [
+        'https://linkedin.com/in/abarboza',
+        'https://github.com/xarielx',
+    ],
+    alumniOf: [
+        { '@type': 'CollegeOrUniversity', name: 'Cornell University' },
+        { '@type': 'CollegeOrUniversity', name: 'University of Florida' },
+    ],
+    knowsLanguage: ['English', 'Spanish'],
+}
+---
+
+<html lang="en" class="">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Favicons & App Icons -->
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/images/ariel_barboza.jpg" />
+        <meta name="theme-color" content="#1e40af" />
+
+        <link rel="canonical" href={canonicalUrl} />
+
+        <title>{title}</title>
+        <meta name="description" content={description} />
+
+        <!-- Open Graph (Facebook, iMessage, WhatsApp, Discord, Slack, etc.) -->
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:image:width" content="600" />
+        <meta property="og:image:height" content="600" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:site_name" content="Ariel Barboza" />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={ogImage} />
+
+        <!-- JSON-LD Structured Data -->
+        <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+        <!-- Inter Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Dark Mode (runs before paint to prevent flash) -->
+        <script is:inline>
+            ;(function () {
+                const theme =
+                    typeof localStorage !== 'undefined' &&
+                    localStorage.getItem('theme')
+                        ? localStorage.getItem('theme')
+                        : window.matchMedia('(prefers-color-scheme: dark)')
+                                .matches
+                          ? 'dark'
+                          : 'light'
+                if (theme === 'dark') {
+                    document.documentElement.classList.add('dark')
+                }
+            })()
+        </script>
+    </head>
+    <body
+        class="bg-white dark:bg-navy-950 text-text-base dark:text-gray-200 min-h-screen font-sans antialiased"
+    >
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        <slot />
+
+        <!-- Scroll Animation Observer -->
+        <script>
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('animate-in')
+                            observer.unobserve(entry.target)
+                        }
+                    })
+                },
+                { threshold: 0.1 }
+            )
+
+            document
+                .querySelectorAll('[data-animate]')
+                .forEach((el) => observer.observe(el))
+        </script>
+    </body>
+</html>

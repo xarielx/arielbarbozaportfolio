@@ -1,0 +1,14 @@
+---
+import { stats } from '../data/stats'
+import StatisticsClient from './StatisticsClient'
+---
+
+<section class="py-20 bg-gradient-to-br from-navy-900 to-navy-800 text-white" aria-label="Impact statistics">
+    <div class="mx-auto container w-4/5 md:w-3/5">
+        <div data-animate class="text-center mb-12">
+            <h2 class="text-4xl font-bold mb-3">Impact By Numbers</h2>
+            <p class="text-lg text-navy-300">Delivering measurable results through AI and automation</p>
+        </div>
+        <StatisticsClient stats={stats} client:visible />
+    </div>
+</section>

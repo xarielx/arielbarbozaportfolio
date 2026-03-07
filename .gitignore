@@ -1,3 +1,21 @@
+# dependencies
 node_modules/
-.cache/
-public
+
+# build
+dist/
+.astro/
+
+# secrets
+.npmrc
+
+# environment
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# editor
+.vscode/
+.idea/

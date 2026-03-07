@@ -1,0 +1,149 @@
+---
+import ThemeToggle from './ThemeToggle.astro'
+import { navLinks, buttonLink } from '../data/site'
+---
+
+<header class="sticky top-0 z-50 bg-white/90 dark:bg-navy-950/90 backdrop-blur-sm border-b border-navy-100 dark:border-navy-800">
+    <nav
+        class="mx-auto container w-11/12 md:w-4/5 flex items-center justify-between py-3 md:py-4"
+        aria-label="Main navigation"
+    >
+        <a
+            href="/"
+            class="text-xl font-bold text-navy-900 dark:text-white tracking-tight"
+            aria-label="Home"
+        >
+            AB<span class="text-accent">.</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center gap-8">
+            {
+                navLinks.map((link) => (
+                    <a
+                        href={link.url}
+                        data-nav-link
+                        class="nav-link text-sm font-medium text-text-muted hover:text-primary dark:hover:text-accent transition-colors"
+                    >
+                        {link.name}
+                    </a>
+                ))
+            }
+            <a
+                href={buttonLink.url}
+                class="text-sm font-semibold px-5 py-2 bg-primary hover:bg-navy-600 text-white rounded-lg transition-colors"
+            >
+                {buttonLink.name}
+            </a>
+            <ThemeToggle />
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="flex items-center gap-3 md:hidden">
+            <ThemeToggle />
+            <button
+                id="mobile-menu-btn"
+                type="button"
+                class="w-10 h-10 flex items-center justify-center rounded-lg text-navy-700 dark:text-gray-300"
+                aria-label="Open menu"
+                aria-expanded="false"
+            >
+                <svg id="menu-open-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="menu-close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div
+        id="mobile-menu"
+        class="hidden md:hidden border-t border-navy-100 dark:border-navy-800 bg-white dark:bg-navy-950"
+    >
+        <div class="px-6 py-4 flex flex-col gap-4">
+            {
+                navLinks.map((link) => (
+                    <a
+                        href={link.url}
+                        data-nav-link
+                        class="mobile-nav-link nav-link text-base font-medium text-text-muted hover:text-primary dark:hover:text-accent transition-colors"
+                    >
+                        {link.name}
+                    </a>
+                ))
+            }
+            <a
+                href={buttonLink.url}
+                class="mobile-nav-link text-center text-sm font-semibold px-5 py-2 bg-primary hover:bg-navy-600 text-white rounded-lg transition-colors"
+            >
+                {buttonLink.name}
+            </a>
+        </div>
+    </div>
+</header>
+
+<script>
+    // Mobile menu toggle
+    const btn = document.getElementById('mobile-menu-btn')
+    const menu = document.getElementById('mobile-menu')
+    const openIcon = document.getElementById('menu-open-icon')
+    const closeIcon = document.getElementById('menu-close-icon')
+
+    btn?.addEventListener('click', () => {
+        const isOpen = !menu?.classList.contains('hidden')
+        menu?.classList.toggle('hidden')
+        openIcon?.classList.toggle('hidden')
+        closeIcon?.classList.toggle('hidden')
+        btn.setAttribute('aria-expanded', String(!isOpen))
+        btn.setAttribute('aria-label', isOpen ? 'Open menu' : 'Close menu')
+    })
+
+    document.querySelectorAll('.mobile-nav-link').forEach((link) => {
+        link.addEventListener('click', () => {
+            menu?.classList.add('hidden')
+            openIcon?.classList.remove('hidden')
+            closeIcon?.classList.add('hidden')
+            btn?.setAttribute('aria-expanded', 'false')
+            btn?.setAttribute('aria-label', 'Open menu')
+        })
+    })
+
+    // Scroll spy - highlight active nav link
+    const sections = document.querySelectorAll('section[id]')
+    const navLinksEl = document.querySelectorAll('[data-nav-link]')
+
+    const scrollSpy = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id')
+                    navLinksEl.forEach((link) => {
+                        const href = link.getAttribute('href')
+                        if (href === `#${id}`) {
+                            link.classList.add('text-primary', 'dark:text-accent')
+                            link.classList.remove('text-text-muted')
+                        } else {
+                            link.classList.remove('text-primary', 'dark:text-accent')
+                            link.classList.add('text-text-muted')
+                        }
+                    })
+                }
+            })
+        },
+        {
+            rootMargin: '-20% 0px -60% 0px',
+            threshold: 0,
+        }
+    )
+
+    sections.forEach((section) => scrollSpy.observe(section))
+</script>
+
+<style>
+    .nav-link.text-primary {
+        font-weight: 600;
+    }
+</style>

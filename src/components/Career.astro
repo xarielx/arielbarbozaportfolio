@@ -1,0 +1,81 @@
+---
+import { milestones } from '../data/career'
+---
+
+<section id="career" class="py-20 bg-white dark:bg-navy-950">
+    <div class="mx-auto container w-4/5 md:w-3/5">
+        <div data-animate class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-3 text-navy-900 dark:text-white">Career Journey</h2>
+            <p class="text-lg text-text-muted dark:text-navy-300">From Army tank crew to AI engineering leadership</p>
+        </div>
+
+        <div class="relative">
+            <!-- Timeline line -->
+            <div class="absolute left-4 md:left-1/2 md:-translate-x-px top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-navy-300 dark:to-navy-700"></div>
+
+            {
+                milestones.map((milestone, i) => {
+                    const isLeft = i % 2 === 0
+                    const animDir = isLeft ? 'slide-right' : 'slide-left'
+                    const typeColors = {
+                        work: 'bg-primary',
+                        education: 'bg-accent',
+                        military: 'bg-navy-700',
+                        early: 'bg-navy-400',
+                    } as const
+                    const dotColor = typeColors[milestone.type as keyof typeof typeColors] || 'bg-primary'
+
+                    return (
+                        <div
+                            class={`relative mb-10 md:mb-12 pl-12 md:pl-0 md:flex ${isLeft ? 'md:flex-row-reverse' : ''}`}
+                            data-animate={animDir}
+                            style={`transition-delay: ${i * 0.08}s`}
+                        >
+                            {/* Dot on timeline */}
+                            <div class={`absolute left-2.5 md:left-1/2 md:-translate-x-1/2 w-3 h-3 rounded-full ${dotColor} ring-4 ring-white dark:ring-navy-950 z-10 mt-2`} />
+
+                            {/* Spacer */}
+                            <div class="hidden md:block md:w-1/2" />
+
+                            {/* Card */}
+                            <div class={`md:w-1/2 ${isLeft ? 'md:pr-10' : 'md:pl-10'}`}>
+                                <div class="p-5 rounded-xl bg-navy-50 dark:bg-navy-800/50 border border-navy-100 dark:border-navy-800 hover:border-accent/30 transition-colors">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <span class="text-xs font-semibold uppercase tracking-wider text-accent">
+                                            {milestone.period}
+                                        </span>
+                                    </div>
+                                    <h3 class="text-lg font-bold text-navy-900 dark:text-white mb-1">
+                                        {milestone.title}
+                                    </h3>
+                                    {milestone.company && (
+                                        <p class="text-sm font-medium text-primary mb-2">
+                                            {milestone.company}
+                                        </p>
+                                    )}
+                                    <p class="text-sm text-text-muted dark:text-navy-300 mb-3">
+                                        {milestone.description}
+                                    </p>
+                                    {milestone.achievements && milestone.achievements.length > 0 && (
+                                        <ul class="space-y-1">
+                                            {milestone.achievements.map((a) => (
+                                                <li class="text-sm text-text-muted dark:text-navy-400 flex items-start gap-2">
+                                                    <span class="text-accent mt-1.5 flex-shrink-0">
+                                                        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                                        </svg>
+                                                    </span>
+                                                    {a}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    )
+                })
+            }
+        </div>
+    </div>
+</section>
