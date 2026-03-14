@@ -28,7 +28,11 @@ const Project = ({ content }) => {
     };
 
     return (
-        <section id='projects' className='my-16 py-16 w-4/5 md:w-3/5 mx-auto'>
+        <section
+            id='projects'
+            aria-label='Featured AI and automation projects by Ariel Barboza'
+            className='my-16 py-16 w-4/5 md:w-3/5 mx-auto'
+        >
             <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}

@@ -80,7 +80,11 @@ const Career = () => {
     ];
 
     return (
-        <section className='my-16 py-16 bg-white dark:bg-black'>
+        <section
+            id='career'
+            aria-label='Career timeline of Ariel Barboza - Engineering Manager, AI Leader, U.S. Army Veteran'
+            className='my-16 py-16 bg-white dark:bg-black'
+        >
             <div className='mx-auto container w-4/5 md:w-3/5'>
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}

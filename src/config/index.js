@@ -1,9 +1,9 @@
 module.exports = {
     author: 'Ariel Barboza',
-    siteTitle: 'Ariel Barboza - AI & Automation Engineer',
+    siteTitle: 'Ariel Barboza | AI Solutions Architect & Engineering Manager',
     siteShortTitle: 'AB',
     siteDescription:
-        'Staff Software Engineer & AI Solutions Architect specializing in LLMs, automation, and enterprise AI at Lockheed Martin. Building the future of intelligent systems.',
+        'Ariel Barboza is a Staff Software Engineer, AI Solutions Architect, and Engineering Manager at Lockheed Martin. Expert in enterprise AI adoption, LLM-powered solutions, ontology management, and intelligent automation. Release Train Engineer leading 104+ engineers. Cornell M.Eng, UF CS & MBA.',
     siteLanguage: 'en_US',
     socialMedia: [
         {

@@ -100,6 +100,7 @@ const Skills = () => {
     return (
         <section
             id='skills'
+            aria-label='Technical expertise and skills of Ariel Barboza - AI, Machine Learning, Engineering Management, Ontology, Automation'
             className='my-16 py-16 bg-gray-50 dark:bg-gray-900'
         >
             <div className='mx-auto container w-4/5 md:w-3/5'>

@@ -121,7 +121,11 @@ const Statistics = () => {
     };
 
     return (
-        <section className='my-16 py-16 bg-gradient-to-br from-gray-900 to-gray-800 text-white'>
+        <section
+            id='impact'
+            aria-label='Impact metrics and achievements of Ariel Barboza as Engineering Manager and AI Solutions Architect'
+            className='my-16 py-16 bg-gradient-to-br from-gray-900 to-gray-800 text-white'
+        >
             <div className='mx-auto container w-4/5 md:w-3/5'>
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}

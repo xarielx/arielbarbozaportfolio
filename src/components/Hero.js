@@ -30,7 +30,7 @@ const Hero = ({ content }) => {
     };
 
     return (
-        <div className='flex items-center bg-pattern shadow-inner min-h-screen relative overflow-hidden'>
+        <header role='banner' className='flex items-center bg-pattern shadow-inner min-h-screen relative overflow-hidden'>
             {/* Animated background elements */}
             <motion.div
                 className='absolute top-20 right-20 w-64 h-64 bg-red-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20'
@@ -152,7 +152,7 @@ const Hero = ({ content }) => {
                     </motion.div>
                 </section>
             </div>
-        </div>
+        </header>
     );
 };
 
