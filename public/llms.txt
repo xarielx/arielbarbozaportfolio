@@ -1,0 +1,96 @@
+# Ariel Barboza — Engineering Manager | AI Manager | AI Adoption Executive
+
+> Ariel Barboza is an Engineering Manager, AI Manager, AI Adoption Executive, and Ontology Manager at Lockheed Martin. He leads AI-focused engineering teams and drives enterprise AI adoption at scale.
+
+## Professional Summary
+
+Ariel Barboza is an experienced Engineering Manager and AI Adoption Executive currently serving as Associate Manager of AI & ML Engineering at Lockheed Martin. He provides technical and people leadership for AI-focused engineering teams delivering enterprise modernization through intelligent data solutions, engineering governance, and high-performance culture.
+
+## Current Role
+
+- **Title:** Associate Manager, AI & ML Engineering
+- **Company:** Lockheed Martin
+- **Focus Areas:** AI Engineering Management, Enterprise AI Strategy, Ontology Engineering, Generative AI Adoption, Intelligent Automation, ML Operations
+
+## Key Qualifications
+
+- Engineering Manager with 7+ years at Lockheed Martin
+- Led 104+ engineers as Release Train Engineer across 10 Agile teams
+- Built enterprise AI solutions processing 88,000+ project issues daily
+- Automated 500+ reports saving $100K+ annually
+- Achieved 22% velocity increase through Agile delivery optimization
+- Expert in NLP, LLMs, Deep Learning, Computer Vision, Predictive Analytics
+- Ontology Engineering and Knowledge Graph specialist
+- AI Governance and AI Ethics practitioner
+
+## Education
+
+- **MBA, Executive Business Administration** — University of Florida (2025)
+- **M.Eng, Systems Engineering** — Cornell University (2021)
+- **B.S., Computer Science** — University of Florida
+
+## Military Service
+
+- **U.S. Army** — 19K M1 Armor Crewman (2012–2016)
+- Fort Bliss, Texas
+- General Patton Jr. Award recipient
+- Tank Gunner with $6.2M equipment responsibility
+
+## Technical Expertise
+
+### Engineering Leadership
+AI Engineering Management, Release Train Engineering, Agile/Scrum Coaching, Stakeholder Management, Cross-Functional Team Leadership, Program Management, Technical Strategy, Organizational Development
+
+### AI & Machine Learning
+NLP & Large Language Models (LLMs), Deep Learning, Predictive Analytics, Computer Vision, Ontology Engineering, Knowledge Graphs, Generative AI, MLOps, AI Governance
+
+### Enterprise Architecture
+Systems Engineering (MBSE), Cloud Architecture (AWS), Microservices, API Design, Platform Engineering, Data Architecture, Enterprise Integration
+
+### Automation & DevSecOps
+CI/CD Pipelines, Docker/Kubernetes, Infrastructure as Code, ETL Automation, GitLab CI/CD, Security Automation
+
+### Data Science & Analytics
+Python/NumPy/Pandas, Tableau/Power BI, SQL, Statistical Analysis, Data Visualization, Big Data Processing
+
+## Certifications
+
+- AI Software Developer (ASEP)
+- Scrum: Advanced
+- Systems Engineering (Cornell)
+- Communicating Across Cultures
+
+## Notable Projects
+
+1. **Twin Gen AI** — Enterprise NLP pipeline analyzing internal technical data using LLMs for intelligent insights
+2. **AgilePulse AI** — Predictive analytics platform processing 88K+ issues daily for risk assessment and KPI analysis
+3. **Enterprise ETL Automation** — Automated 500+ reports with Docker/Kubernetes, delivering $100K+ annual savings
+
+## Relevant Role Titles
+
+Ariel Barboza is qualified for and experienced in roles including:
+- Engineering Manager
+- AI Manager
+- AI Adoption Executive
+- AI/ML Engineering Leader
+- Ontology Manager
+- Generative AI Executive
+- Enterprise AI Strategist
+- AI Transformation Leader
+- Technology Executive
+- Digital Transformation Leader
+- Head of AI Engineering
+- AI Program Manager
+- ML Engineering Manager
+- NLP Engineering Manager
+- Data Science Leader
+- AI Operations Manager
+- VP of Engineering (AI/ML)
+
+## Contact
+
+- **Website:** https://arielbarboza.com
+- **Email:** ariel@arielbarboza.com
+- **LinkedIn:** https://linkedin.com/in/abarboza
+- **GitHub:** https://github.com/xarielx
+- **Languages:** English, Spanish

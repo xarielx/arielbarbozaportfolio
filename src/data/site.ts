@@ -2,7 +2,7 @@ export const siteConfig = {
     author: 'Ariel Barboza',
     title: 'Ariel Barboza — Associate Manager, AI & ML Engineering',
     description:
-        'Associate Manager, AI & ML Engineering at Lockheed Martin. Leading AI-focused engineering teams, enterprise AI strategy, and intelligent data solutions.',
+        'Ariel Barboza — Engineering Manager, AI Manager, and AI Adoption Executive at Lockheed Martin. Expert in AI/ML engineering leadership, ontology engineering, generative AI strategy, enterprise AI adoption, and intelligent automation. Cornell M.Eng, UF MBA, U.S. Army veteran.',
     siteUrl: 'https://arielbarboza.com',
     email: 'ariel@arielbarboza.com',
     language: 'en_US',
